@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>    <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>     <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>     <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= (current_page.data.title ? (current_page.data.title + " | ") : '') + "Hebreeuws Mattheüs" %></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag :all %>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  </head>
+  <body class="<%= page_classes %>">
+    <header>
+      <section>
+        <h1><a href="/">Hebreeuws Mattheüs</a></h1>
+      </section>
+    </header>
+
+    <section>
+      <%= yield %>
+    </section>
+
+    <footer>
+      <section>
+        <p>&copy; Blabla &mdash; Lorem ipsum blabla</p>
+      </section>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <%= javascript_include_tag :all %>
+
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-45979302-1','hebreeuwsmattheus.nl');ga('send','pageview');
+    </script>
+  </body>
+</html>
