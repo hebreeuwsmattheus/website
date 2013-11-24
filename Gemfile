@@ -21,3 +21,7 @@ gem "compass", "~> 0.12.2"
 gem "compass-h5bp", "~> 0.1.1"
 
 gem "capistrano", "~> 2.15.5"
+
+gem "rake"
+
+gem "actionpack"

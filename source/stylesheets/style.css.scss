@@ -54,12 +54,14 @@ html, body {
 
 header {
   background: $color_accent;
+  margin-bottom: 30px;
+  padding: 10px 0;
   
   h1 {
     margin: 0;
     
     a {
-      color: $color_black;
+      color: $color_white;
       text-decoration: none;
     }
   }
@@ -67,6 +69,72 @@ header {
 
 section {
   width: 89%;
-  max-width: 800px;
+  max-width: 970px;
   margin: 0 auto;
+}
+
+.chapter {
+  .line {
+    @include clearfix;
+    
+    &.odd {
+      background: lighten($color_accent, 40%);
+    }
+    
+    p {
+      margin: 0;
+      float: left;
+      width: 100%;
+      padding: 10px;
+      
+      &.line-number {
+        width: 20%;
+        padding-bottom: 0;
+      }
+      &.he {
+        width: 80%;
+        padding-bottom: 0;
+        text-align: right;
+      }
+      &.nl {
+        padding: 0 10px;
+      }
+      
+      &.margin {
+        color: lighten($color_black, 30%);
+        font-style: italic;
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .chapter {
+    .line {
+      p {
+        width: 50%;
+        
+        &.line-number {
+          padding-bottom: 10px;
+          width: 10%;
+        }
+        &.he, &.nl, &.margin {
+          padding: 10px;
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+footer section {
+  border-top: 1px dotted $color_accent;
+  margin-top: 50px;
+  
+  p {
+    text-align: center;
+    font-style: italic;
+    color: lighten($color_black, 50%);
+  }
 }

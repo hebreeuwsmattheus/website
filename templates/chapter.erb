@@ -1,0 +1,21 @@
+<div class="chapter">
+  <% zebra_map = {'even' => 'odd', 'odd' => 'even'}; zebra = 'even' %>
+  <% he.each do |line_id, line| %>
+    <div class="line <%= zebra = zebra_map[zebra] %>">
+      <p class="line-number"><%= line_id %>.</p>
+      <p class="he">
+        <%= line.join("<br />") %>
+      </p>
+      <p class="nl">
+        <% if nl[line_id] %>
+          <%= nl[line_id].join("<br />") %>
+        <% end %>
+      </p>
+      <p class="margin">
+        <% if margin[line_id] %>
+          <%= margin[line_id].join("<br />") %>
+        <% end %>
+      </p>
+    </div>
+  <% end %>
+</div>
