@@ -22,7 +22,16 @@
         <h1><a href="/">Hebreeuws Mattheüs</a></h1>
       </section>
     </header>
-
+    
+    <section class="chapters">
+      <span>Hoofstukken: </span>
+      <ul>
+        <% (1..1).each do |n| %>
+          <li><%= link_to n.to_s, "/chapters/#{n}.html", :class => (current_page.path == "chapters/#{n}.html" ? 'chapter-link active' : 'chapter-link') %></li>
+        <% end%>
+      </ul>
+    </section>
+    
     <section>
       <%= yield %>
     </section>
