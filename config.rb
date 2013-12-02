@@ -41,7 +41,7 @@ require 'compass-h5bp'
 # activate :livereload
 
 activate :directory_indexes
-activate :asset_hash
+activate :asset_hash, exts: %w(.jpg .jpeg .png .gif .js .css .otf .woff .eot .ttf .svg .ico)
 
 # Methods defined in the helpers block are available in templates
 # helpers do
