@@ -1,6 +1,4 @@
 require 'mattheus'
-require 'erb'
-require 'action_view/helpers/text_helper'
 
 class ChapterGenerator
   def initialize(source_path, target_path)

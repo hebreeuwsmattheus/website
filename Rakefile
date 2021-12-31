@@ -3,6 +3,12 @@ $: << File.realpath(File.join(File.dirname(__FILE__), '../tools/lib'))
 # Make sure we can access the generator
 $: << File.realpath(File.join(File.dirname(__FILE__), 'lib'))
 
+require 'rubygems'
+require 'bundler/setup'
+
+Bundler.require(:default)
+
+
 task :build_chapters, :path do |t, args|
   require 'chapter_generator'
   
